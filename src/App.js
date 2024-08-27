@@ -1,6 +1,7 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar';
+import Footer from './components/Footer';
 import Home from './pages/Home';
 import CountrySearch from './pages/CountrySearch';
 import CountryDetail from './pages/CountryDetail';
@@ -10,7 +11,7 @@ import About from './pages/About';
 function App() {
   return (
     <Router>
-      <Navbar />
+      <Navbar/>
       <div className="container mx-auto">
         <Routes>
           <Route path="/" element={<Home />} />
@@ -20,6 +21,7 @@ function App() {
           <Route path="/about" element={<About />} />
         </Routes>
       </div>
+      <Footer/>
     </Router>
   );
 }

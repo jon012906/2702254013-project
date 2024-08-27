@@ -20,11 +20,11 @@ const CountryCard = ({ country, loading }) => {
 
   return (
     <Link to={`/detail/${country.name.common}`}>
-      <div className="bg-slate-50 border rounded-md shadow p-4 hover:shadow-xl">
+      <div className="transition ease-in-out delay-30 bg-slate-50 border rounded-md shadow p-4 hover:shadow-2xl hover:scale-120 hover:translate-y-1">
         <img src={country.flags.png} alt={`${country.name.common} flag`} 
           className="w-64 h-32 m-auto"/>
         <div className='mt-2 r-5 text-center'>
-          <h2 className="text-xl font-bold mb-2">{country.name.common}</h2>
+          <h2 className="text-xl font-bold mb-2 text-gray-950">{country.name.common}</h2>
           <p className="text-gray-600">{country.region}</p>
         </div>
       </div>
