@@ -26,16 +26,19 @@ const CountryDetail = () => {
   }
 
   return (
-    <div className="p-4 bg-cover bg-center min-h-screen text-slate-100" style={{ backgroundImage: `url(${backgroundImage})`}}>
+    <div className="p-4 bg-cover bg-center min-h-screen text-slate-100 " style={{ backgroundImage: `url(${backgroundImage})`}}>
       <h2 className="text-5xl font-bold mb-4 text-center">{country.name.common}</h2>
       <img src={country.flags.png} alt={`${country.name.common} flag`} className='m-auto mb-4'/>
-      <div className='ml-[585px] text-lg drop-shadow-md'>
-        <p>Capital: {country.capital}</p>
-        <p>Population: {country.population}</p>
-        <p>Area: {country.area} km²</p>
-        <p>Currency: {Object.keys(country.currencies)[0]}</p>
+      <div className=' text-lg drop-shadow-md shadow-2xl p-4 rounded-md bg-gradient-to-r from-cyan-500 '>
+        <div className='ml-[200px] md:ml-[655px]'>
+
+        <p>Capital    : {country.capital}</p>
+        <p>Population : {country.population}</p>
+        <p>Area       : {country.area} km²</p>
+        <p>Currency   : {Object.keys(country.currencies)[0]}</p>
         <p>Language(s): {Object.values(country.languages).join(', ')}</p>
-        <p>Location: <a className='text-blue-900 hover:underline transition ease-in-out delay-30' href={`https://www.google.com/maps?q=${country.latlng[0]},${country.latlng[1]}`} target="_blank" rel="noopener noreferrer">View on Map</a></p>
+        <p>Location   : <a className='text-blue-900 hover:underline transition ease-in-out delay-30' href={`https://www.google.com/maps?q=${country.latlng[0]},${country.latlng[1]}`} target="_blank" rel="noopener noreferrer">View on Map</a></p>
+        </div>
       </div>
     </div>
   );

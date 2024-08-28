@@ -25,15 +25,17 @@ const CountrySearch = () => {
     <div className="p-4 bg-cover bg-center min-h-screen" style={{ backgroundImage: `url(${backgroundImage})`}}>
       <h1 className='text-slate-100 text-center font-bold text-3xl mb-4'>What's Country Are You Looking for?</h1>
 
-      <input
-        type="text"
-        placeholder="Search for a country..."
-        value={searchTerm}
-        onChange={e => setSearchTerm(e.target.value)}
-        className="border p-2 mb-4 w-96 text-center"
-      />
+      <div className='flex justify-center'>
+        <input
+          type="text"
+          placeholder="Search for a country..."
+          value={searchTerm}
+          onChange={e => setSearchTerm(e.target.value)}
+          className="border p-2 mb-4 w-96 flex justify-center"
+          />
+      </div>
       
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+      <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-4">
         {loading ? (
           Array.from({ length: 10 }).map((_, index) => (
             <Skeleton key={index} />

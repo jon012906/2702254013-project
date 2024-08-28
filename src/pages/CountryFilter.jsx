@@ -56,8 +56,8 @@ const CountryFilter = () => {
     <div className="p-4 bg-cover bg-center text-slate-100 min-h-screen" style={{ backgroundImage: `url(${backgroundImage})`}}>
       <h1 className="text-5xl font-bold mb-4 text-center">What's Region Are You Looking For?</h1>
 
-      <div className="mb-4 flex gap-4">
-        <div>
+      <div className="md:mb-4 md:flex md:gap-4">
+        <div className='mb-4'>
           <label className="block mb-2">Region</label>
           <select
             value={region}
@@ -75,7 +75,6 @@ const CountryFilter = () => {
         
         <div>
           <label className="block mb-2">Language</label>
-          
           <select
             value={language}
             onChange={e => setLanguage(e.target.value)}
@@ -86,7 +85,6 @@ const CountryFilter = () => {
             ))}
           </select>
         </div>
-
         <div>
 
         <label className="block mb-2">
@@ -100,7 +98,7 @@ const CountryFilter = () => {
         </div>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mt-4">
+      <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-4 mt-4">
         {loading
           ? Array.from({ length: 10 }).map((_, index) => <CountryCard key={index} loading={true} />)
           : filteredCountries.length > 0

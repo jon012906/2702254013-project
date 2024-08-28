@@ -4,7 +4,7 @@ import image from '../asset/globe.png';
 
 const About = () => (
   <div className="p-4 bg-cover bg-center h-screen" style={{ backgroundImage: `url(${backgroundImage})`}}>
-    <div className='text-slate-100 text-center mx-60'>
+    <div className='text-slate-100 text-center md:mx-60'>
       <h1 className="text-5xl font-bold mb-4">About Us</h1>
       <img src={image} alt='World University'
         className='m-auto h-32'></img>

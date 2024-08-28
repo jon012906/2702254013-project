@@ -27,7 +27,7 @@ const Home = () => {
     <div className="p-4 bg-cover bg-center h-auto" style={{ backgroundImage: `url(${backgroundImage})`}}>
       <h1 className="text-3xl font-bold mb-4 text-center text-slate-100">Welcome to World University</h1>
       <img src={image} alt='World University'
-        className='m-auto '></img>
+        className='m-auto md:h-auto h-64'></img>
       
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 mt-4 mb-5">
         {loading
@@ -37,7 +37,7 @@ const Home = () => {
             ))}
       </div>
 
-      <div className='text-xl text-center mx-80 text-slate-100 shadow-2xl p-4 rounded-md bg bg-gradient-to-r from-cyan-500 '>
+      <div className='md:text-xl text-center md:mx-80 text-slate-100 shadow-2xl p-4 rounded-md bg-gradient-to-r from-cyan-500 '>
         <p>
           We are proud to present World University, an innovative platform specifically designed to help students and researchers gain in-depth information about countries around the world. Here, you can explore a wealth of data, from flags and geographical locations to detailed insights that enhance your understanding of each nation.
           Explore the world with World University and discover the information you need with just a few clicks.</p>
