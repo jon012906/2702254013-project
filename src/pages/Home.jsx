@@ -37,16 +37,16 @@ const Home = () => {
             ))}
       </div>
 
-      <div className='text-xl text-center mx-80 text-slate-100'>
+      <div className='text-xl text-center mx-80 text-slate-100 shadow-2xl p-4 rounded-md bg bg-gradient-to-r from-cyan-500 '>
         <p>
           We are proud to present World University, an innovative platform specifically designed to help students and researchers gain in-depth information about countries around the world. Here, you can explore a wealth of data, from flags and geographical locations to detailed insights that enhance your understanding of each nation.
           Explore the world with World University and discover the information you need with just a few clicks.</p>
         <p className='font-semibold mb-5'>
           -Happy Exploring!-</p>
 
-        <button className='p-2 flex mx-auto text-slate-100 bg-blue-500 rounded-lg hover:bg-slate-100 hover:text-blue-700 transition ease-in-out delay-30'>
-          <Link to="/search" className='font-semibold'>See More </Link>
-          <FaArrowRight className='text-3xl'/>
+        <button className='p-2 mb-4 flex mx-auto text-slate-100 bg-blue-600 rounded-lg hover:bg-slate-100 hover:text-blue-700 transition ease-in-out delay-30'>
+          <Link to="/search" className='font-semibold'>Learn More </Link>
+          <FaArrowRight size={33}/>
         </button>
       </div>
       
