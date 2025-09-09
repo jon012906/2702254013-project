@@ -10,7 +10,7 @@ const CountrySearch = () => {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    axios.get('https://restcountries.com/v3.1/all')
+    axios.get('https://restcountries.com/v3.1/all?fields=name,capital,population,area,currencies,languages,flags,latlng')
       .then(response => {
         setCountries(response.data);
         setLoading(false);

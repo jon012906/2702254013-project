@@ -13,7 +13,7 @@ const CountryFilter = () => {
   const [languages, setLanguages] = useState([]);
 
   useEffect(() => {
-    axios.get('https://restcountries.com/v3.1/all')
+    axios.get('https://restcountries.com/v3.1/all?fields=name,capital,population,area,currencies,languages,flags,latlng')
       .then(response => {
         const countriesData = response.data;
         setCountries(countriesData);
@@ -57,7 +57,7 @@ const CountryFilter = () => {
       <h1 className="text-5xl font-bold mb-4 text-center">What's Region Are You Looking For?</h1>
 
       <div className="md:mb-4 md:flex md:gap-4">
-        <div className='mb-4'>
+        {/* <div className='mb-4'>
           <label className="block mb-2">Region</label>
           <select
             value={region}
@@ -72,7 +72,7 @@ const CountryFilter = () => {
             <option value="Oceania">Oceania</option>
             <option value="Antarctic">Antarctic</option>
           </select>
-        </div>
+        </div> */}
         
         <div>
           <label className="block mb-2">Language</label>
@@ -88,14 +88,14 @@ const CountryFilter = () => {
         </div>
         <div>
 
-        <label className="block mb-2">
+        {/* <label className="block mb-2">
           <input
             type="checkbox"
             checked={independent}
             onChange={e => setIndependent(e.target.checked)}
             className="mr-2 mt-10 w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"/>
             Independent Countries Only
-          </label>
+          </label> */}
         </div>
       </div>
 
